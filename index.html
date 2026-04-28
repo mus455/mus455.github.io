@@ -1,0 +1,17 @@
+---
+layout: default
+title: "Home"
+---
+
+<section class="gallery-grid">
+  {% for book in site.books %}
+    <div class="book-entry">
+      <a href="{{ book.url | relative_url }}">
+        <div class="photo-frame">
+          <img src="{{ book.cover_image | relative_url }}" alt="{{ book.title }}">
+        </div>
+        <h3>{{ book.title }}</h3>
+      </a>
+    </div>
+  {% endfor %}
+</section>

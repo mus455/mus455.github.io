@@ -1,0 +1,15 @@
+title: "Street Photography"
+author:  "mus_photography"
+baseurl: "" 
+url: "https://mus455.github.io"
+
+collections:
+  books:
+    output: true
+    permalink: /books/:path/
+  blog:
+    output: true
+    permalink: /blog/:path/
+
+# Markdown settings
+markdown: kramdown
