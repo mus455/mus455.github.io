@@ -7,7 +7,7 @@ cover_image: "/assets/img/R0007296.jpg"
 ---
 NLB Towers
 <div class="photo-frame">
-  <img src="{{ '/assets/img/R0007536.JPG' | relative_url }}" alt="NLB Towers">
+  <img src="{{ '/assets/R0007536.JPG' | relative_url }}" alt="NLB Towers">
 </div>
 
 </div>
