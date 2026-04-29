@@ -3,15 +3,15 @@
     --text-color: #f0f0f0;    /* Stark, clinical white */
     --dim-text: #666666;      /* Faded concrete gray */
     
-    /* Strong Monospace font stack essential for the aesthetic */
+    /* Strong Monospace font stack applied globally */
     --font-mono: "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace;
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: var(--font-mono); /* Applied globally */
-    font-size: 14px; /* Clinical, compact sizing */
+    font-family: var(--font-mono);
+    font-size: 14px;
     line-height: 1.6;
     margin: 0;
     padding: 3vw;
@@ -19,11 +19,10 @@ body {
 }
 
 main {
-    max-width: 960px; /* Wider for Abe-style detailed layouts */
+    max-width: 960px; /* Gritty, compact max-width */
     margin: 0 auto;
 }
 
-/* Typography Grit */
 h1, h3 {
     font-weight: normal;
     text-transform: uppercase;
@@ -38,12 +37,12 @@ a {
     transition: color 0.1s ease;
 }
 
-/* --- The Strong Index Feed --- */
+/* --- The Unified Index Feed --- */
 
 .strong-index {
     display: grid;
-    /* Clean grid, not masonry, for functional look */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* A strict functional grid, not masonry */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 30px;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -51,7 +50,7 @@ a {
 
 .feed-entry {
     background: transparent;
-    border: 1px solid #222; /* Gritty border definition */
+    border: 1px solid #222; /* Define gritty structure */
     padding: 15px;
     transition: border-color 0.1s ease;
 }
@@ -75,23 +74,23 @@ a {
     margin-top: 10px;
 }
 
-/* Preview Treatment */
+/* Preview Treatment - Simplified and corrected for full image scaling */
 .photo-preview {
     margin-bottom: 10px;
-    overflow: hidden; /* Gritty texture container */
+    /* REMOVED overflow: hidden to prevent cropping */
+    /* This allows the full image to show without being truncated */
 }
 
-/* The thumb treatment forces the high-contrast B&W gritty texture */
 .gritty-thumb {
-    width: 100%;
-    height: auto;
+    width: 100%;       /* Scale to full width of parent box */
+    height: auto;      /* Maintain aspect ratio - DO NOT CROP */
     display: block;
-    filter: grayscale(100%) contrast(110%); /* Indulging in the grit */
+    filter: grayscale(100%) contrast(110%);
     transition: filter 0.3s ease;
 }
 
 .feed-entry:hover .gritty-thumb {
-    filter: grayscale(100%) contrast(150%); /* Abe-style overexposure on hover */
+    filter: grayscale(100%) contrast(150%);
 }
 
 .text-preview {
@@ -101,12 +100,21 @@ a {
 }
 .read-more { color: #555; }
 
-/* Single Page Look (We retain the white frame, making it crisp) */
+/* --- Single Page Look (e.g., _layouts/book.html) --- */
+
+/* The internal pages maintain the clean, analog white frame for a stark pop */
 .photo-frame {
     background-color: #ffffff;
     padding: 20px;
     margin-bottom: 40px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.8); /* Starker depth */
+    display: block;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+}
+
+.photo-frame img {
+    width: 100%;       /* Scale to full width of the white frame */
+    height: auto;      /* Ensure scaling and no cropping on internal pages */
+    display: block;
 }
 
 .meta {
