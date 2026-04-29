@@ -1,64 +1,116 @@
 :root {
-    --bg-color: #0a0a0a;      /* Deeper black */
-    --frame-bg: #ffffff;     /* Crisp white for the frame */
-    --text-main: #e0e0e0;
-    --text-dim: #666666;
+    --bg-color: #0d0d0d;      /* Gritty dark alley gray-black */
+    --text-color: #f0f0f0;    /* Stark, clinical white */
+    --dim-text: #666666;      /* Faded concrete gray */
+    
+    /* Strong Monospace font stack essential for the aesthetic */
+    --font-mono: "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace;
 }
 
 body {
     background-color: var(--bg-color);
-    color: var(--text-main);
-    font-family: -apple-system, BlinkMacSystemFont, "monospace", sans-serif;
+    color: var(--text-color);
+    font-family: var(--font-mono); /* Applied globally */
+    font-size: 14px; /* Clinical, compact sizing */
+    line-height: 1.6;
     margin: 0;
-    padding: 40px;
+    padding: 3vw;
     -webkit-font-smoothing: antialiased;
 }
 
-/* Center the content for a "book" feel */
 main {
-    max-width: 900px;
+    max-width: 960px; /* Wider for Abe-style detailed layouts */
     margin: 0 auto;
 }
 
-h1 {
-    font-size: 1.5rem;
-    font-weight: 300;
-    letter-spacing: 3px;
-    margin-bottom: 0.5rem;
+/* Typography Grit */
+h1, h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.meta {
-    color: var(--text-dim);
-    font-size: 0.85rem;
-    margin-bottom: 4rem;
-    letter-spacing: 1px;
+h1 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.1s ease;
 }
 
-/* The White Frame */
-.photo-frame {
-    background-color: var(--frame-bg);
-    padding: 25px; /* Generous white border */
-    margin-bottom: 60px; /* Space between "pages" */
+/* --- The Strong Index Feed --- */
+
+.strong-index {
+    display: grid;
+    /* Clean grid, not masonry, for functional look */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.feed-entry {
+    background: transparent;
+    border: 1px solid #222; /* Gritty border definition */
+    padding: 15px;
+    transition: border-color 0.1s ease;
+}
+
+.feed-entry:hover {
+    border-color: #444;
+}
+
+.entry-link { display: block; }
+
+.entry-title {
+    font-size: 0.95rem;
+    margin: 0 0 10px 0;
+    color: var(--text-color);
+}
+
+.entry-date {
+    font-size: 0.75rem;
+    color: var(--dim-text);
     display: block;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    margin-top: 10px;
 }
 
-.photo-frame img {
+/* Preview Treatment */
+.photo-preview {
+    margin-bottom: 10px;
+    overflow: hidden; /* Gritty texture container */
+}
+
+/* The thumb treatment forces the high-contrast B&W gritty texture */
+.gritty-thumb {
     width: 100%;
     height: auto;
     display: block;
+    filter: grayscale(100%) contrast(110%); /* Indulging in the grit */
+    transition: filter 0.3s ease;
 }
 
-/* Navigation link at the top */
-nav a {
-    color: var(--text-dim);
-    text-decoration: none;
+.feed-entry:hover .gritty-thumb {
+    filter: grayscale(100%) contrast(150%); /* Abe-style overexposure on hover */
+}
+
+.text-preview {
+    font-size: 0.85rem;
+    color: var(--dim-text);
+    margin-top: 10px;
+}
+.read-more { color: #555; }
+
+/* Single Page Look (We retain the white frame, making it crisp) */
+.photo-frame {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8); /* Starker depth */
+}
+
+.meta {
+    color: var(--dim-text);
     font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.2s;
-}
-
-nav a:hover {
-    color: var(--text-main);
+    margin-bottom: 4rem;
 }
