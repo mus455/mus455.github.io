@@ -122,3 +122,58 @@ a {
     font-size: 0.8rem;
     margin-bottom: 4rem;
 }
+
+
+/* --- Blog Architecture --- */
+
+.blog-post {
+    max-width: 700px; /* Optimal reading width for mono type */
+    margin: 0 auto 5rem auto;
+}
+
+.blog-header {
+    margin-bottom: 3rem;
+}
+
+.blog-header h2 {
+    font-size: 1.3rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.blog-content {
+    font-size: 0.9rem;
+    letter-spacing: -0.2px;
+}
+
+/* Typography elements inside markdown rendering */
+.blog-content p {
+    margin-bottom: 1.5rem;
+}
+
+.blog-content h3 {
+    font-size: 1rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    border-bottom: 1px solid #222;
+    padding-bottom: 5px;
+}
+
+.blog-content strong {
+    color: #fff; /* High contrast pops for emphasis */
+}
+
+/* Clean list look for travel gear guides */
+.blog-content ul {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.blog-content li {
+    margin-bottom: 0.5rem;
+}

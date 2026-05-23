@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="blog-post">
+  <header class="blog-header">
+    <h2>{{ page.title }}</h2>
+    <span class="entry-date">
+      {{ page.date | date: "%Y.%m.%d" }} {% if page.location %}// {{ page.location }}{% endif %}
+    </span>
+  </header>
+
+  <div class="blog-content">
+    {{ content }}
+  </div>
+</article>

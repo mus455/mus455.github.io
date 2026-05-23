@@ -9,12 +9,16 @@
 </head>
 <body>
 
-  <header style="padding: 20px 0; margin-bottom: 30px;">
+  <header class="site-header">
     <h1>
-      <a href="{{ '/' | relative_url }}" style="text-decoration: none; color: inherit;">
+      <a href="{{ '/' | relative_url }}">
         {{ site.title }}
       </a>
     </h1>
+    <nav class="nav-links">
+      <a href="{{ '/' | relative_url }}">Main</a>
+      <a href="{{ '/blog' | relative_url }}">Blog</a>
+    </nav>
   </header>
 
   <main>
