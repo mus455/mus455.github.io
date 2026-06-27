@@ -13,21 +13,6 @@ This is a small collection of shots taken during the 2026 spring in the ljubljan
   <img src="{{ '/assets/img/sakura.JPG' | relative_url }}" alt="sakura">
 </div>
 
-# light pillars
-<div class="photo-frame">
-  <img src="{{ '/assets/img/pillars.JPG' | relative_url }}" alt="pillars">
-</div>
-
-# pass
-<div class="photo-frame">
-  <img src="{{ '/assets/img/pass.JPG' | relative_url }}" alt="pass">
-</div>
-
-# shop
-<div class="photo-frame">
-  <img src="{{ '/assets/img/store.JPG' | relative_url }}" alt="store">
-</div>
-
 # working
 <div class="photo-frame">
   <img src="{{ '/assets/img/working.JPG' | relative_url }}" alt="working">

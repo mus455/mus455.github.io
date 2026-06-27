@@ -30,11 +30,6 @@ Being inspired by the Daido Moriyama and Ricoh GR III made me see the unseen bea
   <img src="{{ '/assets/img/machine.JPG' | relative_url }}" alt="train">
 </div>
 
-# Reflection
-<div class="photo-frame">
-  <img src="{{ '/assets/img/reflections.JPG' | relative_url }}" alt="2walking">
-</div>
-
 # together
 <div class="photo-frame">
   <img src="{{ '/assets/img/2walkingbw.JPG' | relative_url }}" alt="2walking">

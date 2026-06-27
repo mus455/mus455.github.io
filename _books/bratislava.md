@@ -49,12 +49,6 @@ Soon after we've spent some time walking around in the festival grounds we were 
   <img src="{{ '/assets/img/bridge-br.JPG' | relative_url }}" alt="bridge">
 </div>
 
-# Markets
-I like the colors and light in this shot. The place is **[Marketplace Miletičova](https://maps.app.goo.gl/Zt3rCQXthbuopAa68)**.
-<div class="photo-frame">
-  <img src="{{ '/assets/img/markets-br.JPG' | relative_url }}" alt="mestni pivovar">
-</div>
-
 # Gallery
 I recommend the **[Gallery Nedbalka](https://maps.app.goo.gl/CgJCiDUJyw1pztN4A)** to anyone. Plus point to the chatty lady in the reception and pure peace and quit in the gallery floors. 
 <div class="photo-frame">
